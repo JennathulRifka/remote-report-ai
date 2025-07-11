@@ -7,11 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 
-interface CheckInFormProps {
-  onClose: () => void;
-}
 
-export const CheckInForm = ({ onClose }: CheckInFormProps) => {
+export const CheckInForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     yesterdayAccomplishments: "",
     todayPlans: "",
@@ -28,7 +25,7 @@ export const CheckInForm = ({ onClose }: CheckInFormProps) => {
     { emoji: "🔥", label: "Productive" }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     // Here you would typically send data to your backend
